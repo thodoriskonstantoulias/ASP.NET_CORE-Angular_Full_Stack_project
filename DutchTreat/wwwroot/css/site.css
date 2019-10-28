@@ -2,7 +2,7 @@
 	font-family : 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-input, textarea {
+input, textarea { 
 	font-size : 18px;
 	width : 200px;
 }
@@ -15,7 +15,28 @@ label {
 	font-size : 16px;
 }
 
-
 img {
 	max-width : 250px;
 }
+
+#loginToggle {
+	cursor : pointer;
+}
+
+.popupForm {
+	padding : 5px;
+	border : 2px black outset;
+	display : inline-block;
+}
+
+	.popupForm input {
+		width : 200px;
+	}
+	.popupForm label {
+		width: 150px;
+		display : inline-block;
+	}
+
+	.popupForm input[type=checkbox], .popupForm input[type=submit] {
+		width : auto;
+	}
