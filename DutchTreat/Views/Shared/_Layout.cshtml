@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>@ViewBag.Title</title>
+	<link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+	<header>
+		<h1>Welcome!</h1>
+		<menu>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/app/contact">Contact</a></li>
+				<li><a href="/app/about">About</a></li>
+			</ul>
+		</menu>
+	</header>
+	<section>
+		@RenderBody()
+	</section>
+	<footer>Copyright 2019</footer>
+	<script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="~/js/index.js"></script>
+</body>
+</html>
