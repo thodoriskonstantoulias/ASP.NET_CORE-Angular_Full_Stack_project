@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html>
-
 <html>
 <head>
 	<meta name="viewport" content="width=device-width" />
@@ -8,12 +7,12 @@
 </head>
 <body>
 	<header>
-		<h1>Welcome!</h1>
+		<h1>@ViewBag.Title</h1>
 		<menu>
 			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/app/contact">Contact</a></li>
-				<li><a href="/app/about">About</a></li>
+				<li><a asp-controller="App" asp-action="Index">Home</a></li>
+				<li><a asp-controller="App" asp-action="Contact">Contact</a></li>
+				<li><a asp-controller="App" asp-action="About">About</a></li>
 			</ul>
 		</menu>
 	</header>

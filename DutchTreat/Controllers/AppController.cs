@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DutchTreat.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DutchTreat.Controllers
@@ -12,14 +13,19 @@ namespace DutchTreat.Controllers
         {
             return View();
         }
+        [HttpGet("contact")]
         public IActionResult Contact()
+        {           
+            return View();
+        }
+
+        [HttpPost("contact")]
+        public IActionResult Contact(ContactViewModel model)
         {
-            ViewBag.Title = "Contact Us";
             return View();
         }
         public IActionResult About()
-        {
-            ViewBag.Title = "About Us";
+        {          
             return View();
         }
     }
