@@ -1,51 +1,60 @@
-﻿@{
-	ViewBag.Title = "Welcome to Index!";
-}
+﻿<div class="row">
+	<div class="col-md-9">
+		<div>
+			<img src="~/img/SK-A-1935.jpg" />
+			<h3>Portrait</h3>
+			<ul>
+				<li>Price : $9.99</li>
+				<li>Artist : Van Gogh</li>
+			</ul>
+			<button class="btn btn-success">Buy</button>
+		</div>
+		<div>
+			<form id="theForm">
+				<label>Your name : </label>
+				<br />
+				<input />
+				<br />
+				<label>Email : </label>
+				<br />
+				<input type="email" />
+				<br />
+				<label>Subject : </label>
+				<br />
+				<input type="text" />
+				<br />
+				<label>Message : </label>
+				<br />
+				<textarea rows="4"></textarea>
+				<br />
+				<input type="submit" value="Send Message" />
+				<button id="theButton" class="btn btn-danger">Test</button>
+			</form>
+		</div>
 
-<h1>@ViewBag.Title</h1>
-<div>
-	<img src="~/img/SK-A-1935.jpg" />
-</div>
-<div>
-	<form id="theForm">
-		<label>Your name : </label>
-		<br />
-		<input />
-		<br />
-		<label>Email : </label>
-		<br />
-		<input type="email" />
-		<br />
-		<label>Subject : </label>
-		<br />
-		<input type="text" />
-		<br />
-		<label>Message : </label>
-		<br />
-		<textarea rows="4"></textarea>
-		<br />
-		<input type="submit" value="Send Message" />
-		<button id="theButton">Test</button>
-	</form>
+		<div>
+			<div id="loginToggle">Login</div>
+			<form class="popupForm">
+				<div>
+					<label>Username</label>
+					<input />
+				</div>
+				<div>
+					<label>Password</label>
+					<input type="password" />
+				</div>
+				<div>
+					<input type="checkbox" />
+					<label>Remember me?</label>
+				</div>
+				<div>
+					<input type="submit" value="Login" />
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="col-md-3">
+		<p>Just a test paragraph for Bootstrap grid system </p>
+	</div>
 </div>
 
-<div>
-	<div id="loginToggle">Login</div>
-	<form class="popupForm">
-		<div>
-			<label>Username</label>
-			<input />
-		</div>
-		<div>
-			<label>Password</label>
-			<input type="password" />
-		</div>
-		<div>
-			<input type="checkbox" />
-			<label>Remember me?</label>
-		</div>
-		<div>
-			<input type="submit" value="Login" />
-		</div>
-	</form>
-</div>

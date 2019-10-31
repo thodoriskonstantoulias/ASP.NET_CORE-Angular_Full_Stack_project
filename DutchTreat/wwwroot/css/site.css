@@ -1,4 +1,7 @@
-﻿body {
+﻿img {
+	max-width: 250px;
+}
+/*body {
 	font-family : 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
 }
 
@@ -15,9 +18,7 @@ label {
 	font-size : 16px;
 }
 
-img {
-	max-width : 250px;
-}
+
 
 #loginToggle { 
 	cursor : pointer;
@@ -43,4 +44,4 @@ img {
 
 menu li {
 	display : inline;
-}
+}*/
