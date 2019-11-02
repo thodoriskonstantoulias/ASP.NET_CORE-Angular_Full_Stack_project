@@ -24,7 +24,7 @@ namespace DutchTreat.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public ActionResult<IEnumerable<Product>> Get()
         {
             try
             {
@@ -34,8 +34,9 @@ namespace DutchTreat.Controllers
             {
                 logger.LogError($"Failed to get products{ex}");
                 return BadRequest("Failed to get products");               
-            }
-            
+            }           
         }
+
+
     }
 }
