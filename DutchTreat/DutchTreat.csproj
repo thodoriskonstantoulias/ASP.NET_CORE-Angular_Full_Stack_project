@@ -139,6 +139,8 @@
     <Content Remove="wwwroot\lib\jquery-validation\dist\localization\methods_pt.min.js" />
     <Content Remove="wwwroot\lib\jquery-validation\LICENSE.md" />
     <Content Remove="wwwroot\lib\jquery-validation\README.md" />
+    <Content Remove="wwwroot\ts\main.ts" />
+    <Content Remove="wwwroot\ts\storecustomer.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -296,6 +298,11 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
     <PackageReference Include="OdeToCode.UseNodeModules" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="wwwroot\ts\main.ts" />
+    <TypeScriptCompile Include="wwwroot\ts\storecustomer.ts" />
   </ItemGroup>
 
 </Project>
