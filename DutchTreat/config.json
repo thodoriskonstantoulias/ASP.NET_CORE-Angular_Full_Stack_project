@@ -1,5 +1,10 @@
 {
 	"ConnectionStrings": {
 		"DutchConnectionString": "Data Source=(localdb)\\ProjectsV13;Database=DutchTreatDb;Integrated Security=True;"
+	},
+	"Tokens": {
+		"Key": "sdfsdfds-sdg-fds",
+		"Issuer": "localhost",
+		"Audience" :  ""
 	}
 }
