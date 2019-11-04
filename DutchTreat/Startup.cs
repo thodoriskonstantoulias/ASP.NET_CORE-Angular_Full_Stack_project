@@ -72,7 +72,7 @@ namespace DutchTreat
             }
             
             app.UseStaticFiles();
-            app.UseNodeModules();
+            //app.UseNodeModules();
             app.UseAuthentication();
             app.UseAuthorization();
             app.UseRouting();
