@@ -144,6 +144,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\app\shop\productList.component.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js" />
     <None Include="wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js" />
     <None Include="wwwroot\lib\jquery-validation-unobtrusive\README.md" />
@@ -307,10 +311,6 @@
   <ItemGroup>
     <TypeScriptCompile Include="wwwroot\ts\main.ts" />
     <TypeScriptCompile Include="wwwroot\ts\storecustomer.ts" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ClientApp\" />
   </ItemGroup>
 
 </Project>

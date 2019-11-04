@@ -8,12 +8,7 @@ let AppComponent = class AppComponent {
 AppComponent = __decorate([
     Component({
         selector: 'the-shop',
-        template: `
-    <div style="text-align:center" class="content">
-      <h1>
-        Welcome to {{title}}!
-      </h1>     
-  `,
+        templateUrl: "./app.component.html",
         styles: []
     })
 ], AppComponent);
