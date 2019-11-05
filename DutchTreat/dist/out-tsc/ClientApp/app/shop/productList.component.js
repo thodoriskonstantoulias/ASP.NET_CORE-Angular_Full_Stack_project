@@ -13,6 +13,9 @@ let ProductList = class ProductList {
             }
         });
     }
+    addProduct(product) {
+        this.data.addToOrder(product);
+    }
 };
 ProductList = __decorate([
     Component({
