@@ -3,18 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ProductList } from './shop/productList.component';
+import { DataService } from './shared/dataService';
+import { HttpClientModule } from '@angular/common/http';
+import { Cart } from './shop/cart.component';
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     NgModule({
         declarations: [
             AppComponent,
-            ProductList
+            ProductList,
+            Cart
         ],
         imports: [
-            BrowserModule
+            BrowserModule,
+            HttpClientModule
         ],
-        providers: [],
+        providers: [DataService],
         bootstrap: [AppComponent]
     })
 ], AppModule);

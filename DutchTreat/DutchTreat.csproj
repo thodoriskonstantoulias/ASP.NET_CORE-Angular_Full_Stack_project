@@ -144,6 +144,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\app\shared\dataService.ts" />
+    <None Remove="ClientApp\app\shared\product.ts" />
+    <None Remove="ClientApp\app\shop\cart.component.ts" />
     <None Remove="ClientApp\app\shop\productList.component.ts" />
   </ItemGroup>
 

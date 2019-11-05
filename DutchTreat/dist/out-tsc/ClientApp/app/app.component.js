@@ -2,7 +2,7 @@ import { __decorate } from "tslib";
 import { Component } from '@angular/core';
 let AppComponent = class AppComponent {
     constructor() {
-        this.title = 'dutch-app2';
+        this.title = 'dutch-app5';
     }
 };
 AppComponent = __decorate([
