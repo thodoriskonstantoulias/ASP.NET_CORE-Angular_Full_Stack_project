@@ -4,13 +4,23 @@ let Login = class Login {
     constructor(data, router) {
         this.data = data;
         this.router = router;
+        this.errorMessage = "";
         this.creds = {
             username: "",
             password: ""
         };
     }
     onLogin() {
-        alert(this.creds.username);
+        this.data.login(this.creds).subscribe(success => {
+            if (success) {
+                if (this.data.order.items.length == 0) {
+                    this.router.navigate([""]);
+                }
+                else {
+                    this.router.navigate(["checkout"]);
+                }
+            }
+        }, err => this.errorMessage = "Failed to login");
     }
 };
 Login = __decorate([
