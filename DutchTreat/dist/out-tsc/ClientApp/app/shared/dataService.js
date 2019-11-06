@@ -5,6 +5,7 @@ import { Order, OrderItem } from './order';
 let DataService = class DataService {
     constructor(http) {
         this.http = http;
+        this.token = "";
         this.products = [];
         this.order = new Order();
     }
@@ -14,6 +15,9 @@ let DataService = class DataService {
             this.products = data;
             return true;
         }));
+    }
+    get loginRequired() {
+        return this.token.length == 0 || this.tokenExpiration > new Date();
     }
     addToOrder(newProduct) {
         let item = this.order.items.find(i => i.productId == newProduct.id);

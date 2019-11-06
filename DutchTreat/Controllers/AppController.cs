@@ -10,7 +10,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DutchTreat.Controllers
 {
-    [Authorize]
     public class AppController : Controller
     {
         private readonly INullMailService mailService;

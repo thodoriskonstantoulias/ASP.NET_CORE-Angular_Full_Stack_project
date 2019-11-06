@@ -67,13 +67,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./ClientApp/app/app.component.ts");
-/* harmony import */ var _shop_productList_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shop/productList.component */ "./ClientApp/app/shop/productList.component.ts");
-/* harmony import */ var _shared_dataService__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./shared/dataService */ "./ClientApp/app/shared/dataService.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var _shop_cart_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./shop/cart.component */ "./ClientApp/app/shop/cart.component.ts");
-/* harmony import */ var _shop_shop_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./shop/shop.component */ "./ClientApp/app/shop/shop.component.ts");
-/* harmony import */ var _checkout_checkout_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./checkout/checkout.component */ "./ClientApp/app/checkout/checkout.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./ClientApp/app/app.component.ts");
+/* harmony import */ var _shop_productList_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./shop/productList.component */ "./ClientApp/app/shop/productList.component.ts");
+/* harmony import */ var _shared_dataService__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./shared/dataService */ "./ClientApp/app/shared/dataService.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _shop_cart_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./shop/cart.component */ "./ClientApp/app/shop/cart.component.ts");
+/* harmony import */ var _shop_shop_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./shop/shop.component */ "./ClientApp/app/shop/shop.component.ts");
+/* harmony import */ var _checkout_checkout_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./checkout/checkout.component */ "./ClientApp/app/checkout/checkout.component.ts");
+/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./login/login.component */ "./ClientApp/app/login/login.component.ts");
+
+
 
 
 
@@ -86,30 +90,33 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let routes = [
-    { path: "", component: _shop_shop_component__WEBPACK_IMPORTED_MODULE_9__["Shop"] },
-    { path: "checkout", component: _checkout_checkout_component__WEBPACK_IMPORTED_MODULE_10__["Checkout"] }
+    { path: "", component: _shop_shop_component__WEBPACK_IMPORTED_MODULE_10__["Shop"] },
+    { path: "checkout", component: _checkout_checkout_component__WEBPACK_IMPORTED_MODULE_11__["Checkout"] },
+    { path: "login", component: _login_login_component__WEBPACK_IMPORTED_MODULE_12__["Login"] }
 ];
 let AppModule = class AppModule {
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
         declarations: [
-            _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-            _shop_productList_component__WEBPACK_IMPORTED_MODULE_5__["ProductList"],
-            _shop_cart_component__WEBPACK_IMPORTED_MODULE_8__["Cart"],
-            _shop_shop_component__WEBPACK_IMPORTED_MODULE_9__["Shop"],
-            _checkout_checkout_component__WEBPACK_IMPORTED_MODULE_10__["Checkout"]
+            _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
+            _shop_productList_component__WEBPACK_IMPORTED_MODULE_6__["ProductList"],
+            _shop_cart_component__WEBPACK_IMPORTED_MODULE_9__["Cart"],
+            _shop_shop_component__WEBPACK_IMPORTED_MODULE_10__["Shop"],
+            _checkout_checkout_component__WEBPACK_IMPORTED_MODULE_11__["Checkout"],
+            _login_login_component__WEBPACK_IMPORTED_MODULE_12__["Login"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"],
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_8__["HttpClientModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
             _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forRoot(routes, {
                 useHash: true,
                 enableTracing: false
             })
         ],
-        providers: [_shared_dataService__WEBPACK_IMPORTED_MODULE_6__["DataService"]],
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+        providers: [_shared_dataService__WEBPACK_IMPORTED_MODULE_7__["DataService"]],
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
     })
 ], AppModule);
 
@@ -150,10 +157,6 @@ let Checkout = class Checkout {
     constructor(data) {
         this.data = data;
     }
-    onCheckout() {
-        // TODO
-        alert("Doing checkout");
-    }
 };
 Checkout.ctorParameters = () => [
     { type: _shared_dataService__WEBPACK_IMPORTED_MODULE_2__["DataService"] }
@@ -165,6 +168,52 @@ Checkout = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./checkout.component.css */ "./ClientApp/app/checkout/checkout.component.css")).default]
     })
 ], Checkout);
+
+
+
+/***/ }),
+
+/***/ "./ClientApp/app/login/login.component.ts":
+/*!************************************************!*\
+  !*** ./ClientApp/app/login/login.component.ts ***!
+  \************************************************/
+/*! exports provided: Login */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Login", function() { return Login; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _shared_dataService__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared/dataService */ "./ClientApp/app/shared/dataService.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
+
+
+
+let Login = class Login {
+    constructor(data, router) {
+        this.data = data;
+        this.router = router;
+        this.creds = {
+            username: "",
+            password: ""
+        };
+    }
+    onLogin() {
+        alert(this.creds.username);
+    }
+};
+Login.ctorParameters = () => [
+    { type: _shared_dataService__WEBPACK_IMPORTED_MODULE_2__["DataService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+];
+Login = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: "login",
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./login.component.html */ "./node_modules/raw-loader/dist/cjs.js!./ClientApp/app/login/login.component.html")).default
+    })
+], Login);
 
 
 
@@ -193,6 +242,7 @@ __webpack_require__.r(__webpack_exports__);
 let DataService = class DataService {
     constructor(http) {
         this.http = http;
+        this.token = "";
         this.products = [];
         this.order = new _order__WEBPACK_IMPORTED_MODULE_4__["Order"]();
     }
@@ -202,6 +252,9 @@ let DataService = class DataService {
             this.products = data;
             return true;
         }));
+    }
+    get loginRequired() {
+        return this.token.length == 0 || this.tokenExpiration > new Date();
     }
     addToOrder(newProduct) {
         let item = this.order.items.find(i => i.productId == newProduct.id);
@@ -278,16 +331,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _shared_dataService__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared/dataService */ "./ClientApp/app/shared/dataService.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
 
 
 
 let Cart = class Cart {
-    constructor(data) {
+    constructor(data, router) {
         this.data = data;
+        this.router = router;
+    }
+    onCheckout() {
+        if (this.data.loginRequired) {
+            this.router.navigate(["login"]);
+        }
+        else {
+            this.router.navigate(["checkout"]);
+        }
     }
 };
 Cart.ctorParameters = () => [
-    { type: _shared_dataService__WEBPACK_IMPORTED_MODULE_2__["DataService"] }
+    { type: _shared_dataService__WEBPACK_IMPORTED_MODULE_2__["DataService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
 ];
 Cart = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -472,6 +537,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./ClientApp/app/login/login.component.html":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./ClientApp/app/login/login.component.html ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\r\n\t<div class=\"col-md-4 col-md-offset-4\">\r\n\t\t<form (submit)=\"onLogin()\">\r\n\t\t\t<div class=\"form-group\">\r\n\t\t\t\t<label for=\"username\">Username</label>\r\n\t\t\t\t<input type=\"text\" class=\"form-control\" name=\"username\" [(ngModel)] =\"creds.username\"/>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"form-group\">\r\n\t\t\t\t<label for=\"password\">Password</label>\r\n\t\t\t\t<input type=\"password\" class=\"form-control\" name=\"password\" [(ngModel)] =\"creds.password\"/>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"form-group\">\r\n\t\t\t\t<input type=\"submit\" class=\"btn btn-success\" value=\"Login\" />\r\n\t\t\t\t<a routerLink =\"/\" class=\"btn btn-default\">Cancel</a>\r\n\t\t\t</div>\r\n\t\t</form>\r\n\t</div>\r\n</div>");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./ClientApp/app/shop/cart.component.html":
 /*!**************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./ClientApp/app/shop/cart.component.html ***!
@@ -481,7 +559,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h3>Shopping Cart</h3>\r\n<div>Count : {{data.order.items.length}}</div>\r\n<div>Subtotal : {{data.order.subtotal | currency:\"USD\":true}}</div>\r\n<table class=\"table table-condensed table-hover\"> \r\n\t<thead>\r\n\t\t<tr>\r\n\t\t\t<td>Product</td>\r\n\t\t\t<td>#</td>\r\n\t\t\t<td>$</td>\r\n\t\t\t<td>Total</td>\r\n\t\t</tr>\r\n\t</thead>\r\n\t<tbody>\r\n\t\t<tr *ngFor=\"let o of data.order.items\">\r\n\t\t\t<td>{{o.productCategory}} - {{o.productTitle}}</td>\r\n\t\t\t<td>{{o.quantity}}</td>\r\n\t\t\t<td>{{o.unitPrice | currency:\"USD\":true}}</td>\r\n\t\t\t<td>{{(o.quantity * o.unitPrice) | currency:\"USD\":true }}</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n<a routerLink =\"checkout\" class=\"btn btn-success\" *ngIf =\"data.order.items.length > 0\">Checkout</a>");
+/* harmony default export */ __webpack_exports__["default"] = ("<h3>Shopping Cart</h3>\r\n<div>Count : {{data.order.items.length}}</div>\r\n<div>Subtotal : {{data.order.subtotal | currency:\"USD\":true}}</div>\r\n<table class=\"table table-condensed table-hover\"> \r\n\t<thead>\r\n\t\t<tr>\r\n\t\t\t<td>Product</td>\r\n\t\t\t<td>#</td>\r\n\t\t\t<td>$</td>\r\n\t\t\t<td>Total</td>\r\n\t\t</tr>\r\n\t</thead>\r\n\t<tbody>\r\n\t\t<tr *ngFor=\"let o of data.order.items\">\r\n\t\t\t<td>{{o.productCategory}} - {{o.productTitle}}</td>\r\n\t\t\t<td>{{o.quantity}}</td>\r\n\t\t\t<td>{{o.unitPrice | currency:\"USD\":true}}</td>\r\n\t\t\t<td>{{(o.quantity * o.unitPrice) | currency:\"USD\":true }}</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n<button class=\"btn btn-success\" *ngIf =\"data.order.items.length > 0\" (click) = \"onCheckout()\">Checkout</button>");
 
 /***/ }),
 
@@ -507,7 +585,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\r\n\t<div class=\"col-md-8\">\r\n\t\t<h3>{{title}}</h3>\r\n\t\t<product-list></product-list>\r\n\t</div>\r\n\t<div class=\"col-md-4\">\r\n\t\t<div class=\"card bg-light p-2\">\r\n\t\t\t<the-cart></the-cart>\r\n\t\t</div>\r\n\t</div>\r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\r\n\t<div class=\"col-md-8\">\r\n\t\t<product-list></product-list>\r\n\t</div>\r\n\t<div class=\"col-md-4\">\r\n\t\t<div class=\"card bg-light p-2\">\r\n\t\t\t<the-cart></the-cart>\r\n\t\t</div>\r\n\t</div>\r\n</div>");
 
 /***/ }),
 

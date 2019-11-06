@@ -11,8 +11,4 @@ export class Checkout {
   constructor(public data: DataService) {
   }
 
-  onCheckout() {
-    // TODO
-    alert("Doing checkout");
-  }
 }

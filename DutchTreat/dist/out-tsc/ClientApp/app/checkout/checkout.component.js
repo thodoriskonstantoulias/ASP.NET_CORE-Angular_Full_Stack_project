@@ -4,10 +4,6 @@ let Checkout = class Checkout {
     constructor(data) {
         this.data = data;
     }
-    onCheckout() {
-        // TODO
-        alert("Doing checkout");
-    }
 };
 Checkout = __decorate([
     Component({
