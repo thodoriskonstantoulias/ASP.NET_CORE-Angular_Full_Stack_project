@@ -39,7 +39,7 @@ __webpack_require__.r(__webpack_exports__);
 
 let AppComponent = class AppComponent {
     constructor() {
-        this.title = 'dutch-app5';
+        this.title = 'dutch-app7';
     }
 };
 AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -176,12 +176,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Order", function() { return Order; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OrderItem", function() { return OrderItem; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_1__);
+
 
 class Order {
     constructor() {
         this.orderDate = new Date();
         this.items = new Array();
     }
+    get subtotal() {
+        return lodash__WEBPACK_IMPORTED_MODULE_1__["sum"](lodash__WEBPACK_IMPORTED_MODULE_1__["map"](this.items, i => i.unitPrice * i.quantity));
+    }
+    ;
 }
 class OrderItem {
 }
@@ -352,7 +359,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\r\n\t<div class=\"col-md-9\">\r\n\t\t<h3>{{title}}</h3>\r\n\t\t<product-list></product-list>\r\n\t</div>\r\n\t<div class=\"col-md-3\">\r\n\t\t<div class=\"card bg-light p-2\">\r\n\t\t\t<the-cart></the-cart>\r\n\t\t</div>\t\r\n\t</div>\r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\r\n\t<div class=\"col-md-8\">\r\n\t\t<h3>{{title}}</h3>\r\n\t\t<product-list></product-list>\r\n\t</div>\r\n\t<div class=\"col-md-4\">\r\n\t\t<div class=\"card bg-light p-2\">\r\n\t\t\t<the-cart></the-cart>\r\n\t\t</div>\t\r\n\t</div>\r\n</div>");
 
 /***/ }),
 
@@ -365,7 +372,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h3>Shopping Cart</h3>\r\n<div>Count : {{data.order.items.length}}</div>\r\n<table class=\"table table-condensed table-hover\"> \r\n\t<thead>\r\n\t\t<tr>\r\n\t\t\t<td>Product</td>\r\n\t\t\t<td>#</td>\r\n\t\t\t<td>$</td>\r\n\t\t\t<td>Total</td>\r\n\t\t</tr>\r\n\t</thead>\r\n\t<tbody>\r\n\t\t<tr *ngFor=\"let o of data.order.items\">\r\n\t\t\t<td>{{o.productCategory}} - {{o.productTitle}}</td>\r\n\t\t\t<td>{{o.quantity}}</td>\r\n\t\t\t<td>{{o.unitPrice | currency:\"USD\":true}}</td>\r\n\t\t\t<td>{{(o.quantity * o.unitPrice) | currency:\"USD\":true }}</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>");
+/* harmony default export */ __webpack_exports__["default"] = ("<h3>Shopping Cart</h3>\r\n<div>Count : {{data.order.items.length}}</div>\r\n<div>Subtotal : {{data.order.subtotal | currency:\"USD\":true}}</div>\r\n<table class=\"table table-condensed table-hover\"> \r\n\t<thead>\r\n\t\t<tr>\r\n\t\t\t<td>Product</td>\r\n\t\t\t<td>#</td>\r\n\t\t\t<td>$</td>\r\n\t\t\t<td>Total</td>\r\n\t\t</tr>\r\n\t</thead>\r\n\t<tbody>\r\n\t\t<tr *ngFor=\"let o of data.order.items\">\r\n\t\t\t<td>{{o.productCategory}} - {{o.productTitle}}</td>\r\n\t\t\t<td>{{o.quantity}}</td>\r\n\t\t\t<td>{{o.unitPrice | currency:\"USD\":true}}</td>\r\n\t\t\t<td>{{(o.quantity * o.unitPrice) | currency:\"USD\":true }}</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>");
 
 /***/ }),
 
