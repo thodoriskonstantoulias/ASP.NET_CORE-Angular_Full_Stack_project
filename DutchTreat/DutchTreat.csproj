@@ -149,6 +149,11 @@
     <None Remove="ClientApp\app\shared\product.ts" />
     <None Remove="ClientApp\app\shop\cart.component.ts" />
     <None Remove="ClientApp\app\shop\productList.component.ts" />
+    <None Remove="ClientApp\app\shop\shop.component.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Remove="ClientApp\app\checkout\checkout.component.ts" />
   </ItemGroup>
 
   <ItemGroup>
