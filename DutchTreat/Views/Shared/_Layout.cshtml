@@ -3,9 +3,16 @@
 <head>
 	<meta name="viewport" content="width=device-width" />
 	<title>@ViewBag.Title</title>
-	<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
-	<link href="~/node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-	<link href="~/css/site.css" rel="stylesheet" asp-append-version="true" />
+	<environment names="Development">
+		<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+		<link href="~/node_modules/font-awesome/css/font-awesome.css" rel="stylesheet" />
+		<link href="~/css/site.css" rel="stylesheet" asp-append-version="true" />
+	</environment>
+	<environment names="Staging,Production">
+		<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="~/node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="~/css/site.css" rel="stylesheet" asp-append-version="true" />
+	</environment>
 </head>
 <body>
 	<header class="container">	
@@ -39,9 +46,15 @@
 	<footer class="container">
 		<div class="text-center">Copyright 2019</div>
 	</footer>
-	<script src="~/lib/jquery/dist/jquery.min.js"></script>
-	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
-	<script src="~/js/index.js"></script>
+	<environment names="Development">
+		<script src="~/lib/jquery/dist/jquery.js"></script>
+		<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+		<script src="~/js/index.js"></script>
+	</environment>
+	<environment names="Staging,Production">
+		<script src="~/lib/jquery/dist/jquery.min.js"></script>
+		<script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+	</environment>
 	@RenderSection("scripts", false)
 </body>
 </html>
