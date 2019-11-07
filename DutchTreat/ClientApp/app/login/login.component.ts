@@ -21,11 +21,8 @@ export class Login {
 			if (success) {
 				console.log("SUCCESS");
 				if (this.data.order.items.length == 0) {
-					console.log("NOT FOUND ITEMS SO GO BACK TO SHOP");
 					this.router.navigate([""]);
 				} else {
-					console.log("FOUND ITEMS SO GO BACK TO CHECKOUT");
-					console.log(this.data.order.items);
 					this.router.navigate(["checkout"]);
 				}
 			}
