@@ -32,7 +32,7 @@ let DataService = class DataService {
             this.order.orderNumber = this.order.orderDate.getFullYear().toString() + this.order.orderDate.getTime().toString();
         }
         return this.http.post("/api/orders", this.order, {
-            headers: new HttpHeaders().set("Authorization", "Bearer" + this.token)
+            headers: new HttpHeaders().set("Authorization", "Bearer " + this.token)
         })
             .pipe(map(response => {
             this.order = new Order();

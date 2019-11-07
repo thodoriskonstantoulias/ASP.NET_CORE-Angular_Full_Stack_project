@@ -216,7 +216,6 @@ let Login = class Login {
     onLogin() {
         this.data.login(this.creds).subscribe(success => {
             if (success) {
-                console.log("SUCCESS");
                 if (this.data.order.items.length == 0) {
                     this.router.navigate([""]);
                 }
@@ -291,7 +290,7 @@ let DataService = class DataService {
             this.order.orderNumber = this.order.orderDate.getFullYear().toString() + this.order.orderDate.getTime().toString();
         }
         return this.http.post("/api/orders", this.order, {
-            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().set("Authorization", "Bearer" + this.token)
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]().set("Authorization", "Bearer " + this.token)
         })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(response => {
             this.order = new _order__WEBPACK_IMPORTED_MODULE_4__["Order"]();

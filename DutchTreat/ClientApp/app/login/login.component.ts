@@ -19,7 +19,6 @@ export class Login {
 	onLogin() {
 		this.data.login(this.creds).subscribe(success => {
 			if (success) {
-				console.log("SUCCESS");
 				if (this.data.order.items.length == 0) {
 					this.router.navigate([""]);
 				} else {
