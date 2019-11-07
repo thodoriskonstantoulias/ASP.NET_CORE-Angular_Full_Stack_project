@@ -1,4 +1,5 @@
 ﻿<div class="row">
+  <div *ngIf="errorMessage" class="alert alert-warning">{{errorMessage}}</div>
   <h3>Confirm Order</h3>
   <table class="table table-bordered table-hover">
     <tr *ngFor="let o of data.order.items">
@@ -24,7 +25,7 @@
         <td class="text-right">{{ data.order.subtotal|currency:'USD':true }}</td>
       </tr>
     </table>
-    <button class="btn btn-success" (click)="onCheckout()">Complete Purchase</button>
+    <button class="btn btn-success" (click)="onCheckoutSubmit()">Complete Purchase</button>
     <a routerLink="/" class="btn btn-info">Cancel</a>
   </div>
 

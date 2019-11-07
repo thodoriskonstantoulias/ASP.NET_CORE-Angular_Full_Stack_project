@@ -1,4 +1,4 @@
-﻿import { HttpClient } from '@angular/common/http';
+﻿import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
@@ -35,6 +35,19 @@ export class DataService {
 		return this.http.post("/account/createtoken", creds).pipe(map((data: any) => {
 			this.token = data.token;
 			this.tokenExpiration = data.expiration;
+			return true;
+		}));
+	}
+
+	checkout() {
+		if (!this.order.orderNumber) {
+			this.order.orderNumber = this.order.orderDate.getFullYear().toString() + this.order.orderDate.getTime().toString();
+		}
+		return this.http.post("/api/orders", this.order, {
+			headers: new HttpHeaders().set("Authorization", "Bearer" + this.token)
+		})
+			.pipe(map(response => {
+			this.order = new Order();		
 			return true;
 		}));
 	}
